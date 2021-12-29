@@ -2,7 +2,6 @@
 #include <iostream>
 #include <cmath>
 
-#include "ball.hpp"
 
 using namespace sf;
 using namespace std;
@@ -197,11 +196,6 @@ int main(int argc, char **argv) {
                 }
             }
         }
-
-        // Time ftime = clock.getElapsedTime();
-        // cout << ftime.asSeconds() << endl;
-
-        // clock.restart().asSeconds();
 
         window.clear();
         ball.render(&window);
