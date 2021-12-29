@@ -1,7 +1,8 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include <cmath>
-#include <sstream>
+
+#include "ball.hpp"
 
 using namespace sf;
 using namespace std;
@@ -165,6 +166,7 @@ int main(int argc, char **argv) {
 
     Clock clock;
 
+
     while(window.isOpen()) {
         Event event;
         while(window.pollEvent(event)) {
@@ -174,19 +176,15 @@ int main(int argc, char **argv) {
             else if(event.type == Event::EventType::KeyPressed) {
                 switch (event.key.code) {
                 case 71:
-                    cout << "Left Arrow" << endl;
                     ball.acceleratex(-16);
                     break;
                 case 72:
-                    cout << "Right Arrow" << endl;
                     ball.acceleratex(16);
                     break;
                 case 73:
-                    cout << "Up Arrow" << endl;
                     ball.acceleratey(-16);
                     break;
                 case 74:
-                    cout << "Down Arrow" << endl;
                     ball.acceleratey(16);
                     break;
                 case 36:
